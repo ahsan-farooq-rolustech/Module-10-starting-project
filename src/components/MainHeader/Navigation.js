@@ -4,6 +4,10 @@ import classes from './Navigation.module.css';
 import AuthContext from './../../store/auth-context';
 
 const Navigation = (props) => {
+  /**
+   * used the context api to get the value of isLoggedIn using a hook which is the
+   * useContext hook. using the ctx variable we will have access to the isLoggedIn
+   */
   const ctx=useContext(AuthContext)
 
   return (

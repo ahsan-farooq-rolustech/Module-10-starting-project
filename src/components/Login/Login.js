@@ -37,6 +37,14 @@ const passwordReducer=(state,action)=>{
 }
 
 const Login = (props) => {
+  /**
+   * in the case when we have to make a decision which is based on two or more states
+   * it is better to use useReducer hook instead of useState. the reason for that is 
+   * react shedules the state changes rather than changes them instantly. so when we are 
+   * using more than one state,  it is possible 
+   * that we dont get the latest snap shot of either of the two state so to avoid that we use 
+   * useReducer hook
+   */
   // const [enteredEmail, setEnteredEmail] = useState('');
   // const [emailIsValid, setEmailIsValid] = useState();
   // const [enteredPassword, setEnteredPassword] = useState('');

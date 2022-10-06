@@ -30,6 +30,12 @@ function App() {
 
   return (
     
+
+    /**
+     * you have to wrap the components that needs the access to the context 
+     * in our case we need the auth context in the whole app so iam wraping the app.js 
+     * with the context provider 
+     */
     <AuthContext.Provider
       value={{
         isLoggedIn:isLoggedIn,
