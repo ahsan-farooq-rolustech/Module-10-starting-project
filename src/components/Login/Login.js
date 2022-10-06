@@ -31,7 +31,7 @@ const passwordReducer=(state,action)=>{
 
   if(action.type==='INPUT_BLUR')
   {
-    return {value:state.value,isValid:action.val.trim().length>6}
+    return {value:state.value,isValid:state.value.trim().length>6}
   }
   return {value:'',isValid:false};
 }
@@ -72,7 +72,7 @@ const Login = (props) => {
     dispatchEmail({type:'USER_INPUT',val:event.target.value})
 
     setFormIsValid(
-      event.target.value.includes('@') && passwordState.isValid
+     emailState.isValid && passwordState.isValid
     );
   };
 
